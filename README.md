@@ -50,6 +50,7 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+```
 
 ## Step 5: Write the logic to play the entire game
 
