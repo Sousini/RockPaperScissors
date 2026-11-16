@@ -1,64 +1,102 @@
-# RockPaperScissors
+<div align="center">
 
+# ✊✋✌️ Rock Paper Scissors
 
+A classic **Rock, Paper, Scissors** game played against the computer, written in **vanilla JavaScript**.
 
-## Step 1: Write the logic to get the computer choice
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Status](https://img.shields.io/badge/status-completed-brightgreen?style=for-the-badge)
 
-Your game will be played against the computer. You will write a function that randomly returns “rock”, “paper” or “scissors”.
+</div>
 
-    Create a new function named getComputerChoice.
-    Write the code so that getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.
-        Hint: The Math.random method returns a random number that’s greater than or equal to 0 and less than 1. Think about how you can use this to conditionally return one of the multiple choices.
-        Note: Some learners might think that arrays are necessary for this problem, but they aren’t. If you’re unfamiliar with arrays, don’t worry - they’ll be covered later in the curriculum.
-    Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
+---
 
-## Step 2: Write the logic to get the human choice
+## ✨ Features
 
-Your game will be played by a human player. You will write a function that takes the user choice and returns it.
+- 🤖 The computer picks **rock, paper or scissors** at random
+- 🙋 The player types their choice in a prompt (**case-insensitive**: `rock`, `ROCK`, `RocK`...)
+- 🏆 Every round announces the winner, e.g. *"You lose! Paper beats Rock"*
+- 🔢 Keeps track of the **human and computer scores**
+- 🎮 A full game is **5 rounds**, with the overall winner declared at the end
 
-    Create a new function named getHumanChoice.
-    Write the code so that getHumanChoice will return one of the valid choices depending on what the user inputs.
-        Hint: Use the prompt method to get the user’s input.
-        You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
-    Test what your function returns by using console.log.
+---
 
-## Step 3: Declare the players score variables
+## 📁 Project structure
 
-Your game will keep track of the players score. You will write variables to keep track of the players score.
-
-    Create two new variables named humanScore and computerScore in the global scope.
-    Initialize those variables with the value of 0.
-
-## Step 4: Write the logic to play a single round
-
-Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
-
-    Create a new function named playRound.
-    Define two parameters for playRound: humanChoice and computerChoice. Use these two parameters to take the human and computer choices as arguments.
-    Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations.
-    Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
-    Increment the humanScore or computerScore variable based on the round winner.
-
-Example code:
-
-```javascript
-function playRound(humanChoice, computerChoice) {
-  // your code here!
-}
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+```
+RockPaperScissors/
+├── index.html    # Loads the script
+├── script.js     # Game logic
+└── README.md
 ```
 
-## Step 5: Write the logic to play the entire game
+---
 
-Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+## 🚀 How to run
 
-    Create a new function named playGame.
-    Move your playRound function and score variables so that they’re declared inside of the new playGame function
-    Play 5 rounds by calling playRound 5 times.
-        Hint: When you assign a function call to a variable, the return value of that function is assigned to the variable. Accessing the variable afterward will only provide the assigned value; it doesn’t recall the function. You need to recall the choice functions to get new choices for each round.
-        Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
-        If you already know about loops, you can use them. If not, don’t worry! Loops will be covered in the next lesson.
+No installation or build step needed.
+
+```bash
+# Clone the repository
+git clone https://github.com/Sousini/RockPaperScissors.git
+cd RockPaperScissors
+
+# Open index.html in your browser
+```
+
+Then open the **browser developer console** (`F12` → *Console*) to see the results of each round and the final score.
+
+---
+
+## 🎮 How to play
+
+1. Open `index.html` in your browser.
+2. Type `rock`, `paper` or `scissors` in each prompt.
+3. Check the console to see who won each round.
+4. After 5 rounds, the winner of the game is announced.
+
+---
+
+## 🧠 How it works
+
+| Function | What it does |
+| :------- | :----------- |
+| `getComputerChoice()` | Uses `Math.random()` to randomly return `"rock"`, `"paper"` or `"scissors"` |
+| `getHumanChoice()` | Uses `prompt()` to get the player's choice |
+| `playRound(humanChoice, computerChoice)` | Plays one round, logs the winner and updates the score |
+| `playGame()` | Plays 5 rounds, keeps the scores and declares the winner |
+
+---
+
+## 🛠️ Built with
+
+- **HTML5**
+- **JavaScript (ES6)**
+
+---
+
+## 🎯 What I learned
+
+- Writing and testing small, focused functions
+- Generating random values with `Math.random()`
+- Getting user input with `prompt()` and logging with `console.log()`
+- Conditionals and keeping state with variables
+
+---
+
+## 🔮 Possible improvements
+
+- [ ] Add a UI with buttons instead of prompts
+- [ ] Display the scores and results on the page
+- [ ] Style the game with CSS
+- [ ] Handle invalid inputs
+
+---
+
+## 👤 Author
+
+**João Sousa**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Sousini-181717?style=for-the-badge&logo=github)](https://github.com/Sousini)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-sousa-63ab4537a/)
